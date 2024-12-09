@@ -53,15 +53,12 @@ function Home() {
         />
 
         {
-            users.map((user, index) => 
+            users.map((user) => 
                 user.location ? (
-                    (index !== 1 ? <Marker key={user.id} position={user.location}>
+                    <Marker key={user.id} position={user.location}>
                             <Popup>Another user is here!</Popup>
-                        </Marker> :
-                        <Marker key={user.id} position={[17.44622991321134, 78.35709885136025]}>
-                            <Popup>Another user is here!</Popup>
-                        </Marker>
-                    )
+                    </Marker> 
+                        
                 ) : null
             )
         }
