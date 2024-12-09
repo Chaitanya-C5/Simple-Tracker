@@ -8,7 +8,7 @@ function Home() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const socket = io.connect('http://localhost:3000')
+    const socket = io.connect('https://simple-tracker-backend.onrender.com')
     if(navigator.geolocation) {
         navigator.geolocation.watchPosition(
             (position) => {
