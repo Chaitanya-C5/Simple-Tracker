@@ -53,7 +53,7 @@ function Home() {
         />
 
         {
-            users.map((user) => 
+            users.length > 0 && users.map((user) => 
                 user.location ? (
                     <Marker key={user.id} position={user.location}>
                             <Popup>Another user is here!</Popup>
